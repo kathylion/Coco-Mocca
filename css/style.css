@@ -1,0 +1,490 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --tono_claro: #9E6565;
+	--tono_medio: #7E413F;
+	--tono_oscuro: #441F1D;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 100%;
+    background: #F4EFEC;
+}
+
+/* Header */ 
+h1 {
+    font-family: 'Kaushan Script', cursive;
+}
+
+h2 {
+    font-size: 1em;
+}
+
+.header_title {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+.bg_img {
+    background-image: url("../rsc/img/bg.jpg");
+    filter: grayscale(20%);
+    height: 400px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.bg_navbar {
+    background-image: url("../rsc/img/bg_navbar.png");
+    height: 70px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+/* Nav Bar */
+
+.navbar {
+    overflow: hidden;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    font-family: 'Kaushan Script', cursive;
+    padding: 16px 16px;
+    text-decoration: none;
+    font-size: 1.4em;
+}
+
+.navbar a:hover {
+    color: var(--tono_oscuro);
+}
+
+.navbar .icon {
+    display: none;
+}
+
+/* Main */ 
+
+section img {
+    width: 100%;
+    display: block; /* Añadi esto para eliminar un pixel que aparecía debajo de las imágenes */ 
+}
+
+.p_decorado {
+    font-family: 'Kaushan Script', cursive;
+    color: var(--tono_medio);
+    font-size: 2em;
+    text-align: center;
+    margin: 120px 20px;
+}
+
+/* Section del horario */  
+.horario {
+    padding: 100px 20px;
+    background-color: var(--tono_claro);
+    color: white;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.horario h3 {
+    margin-bottom: 30px;
+    letter-spacing: 0.7px;
+}
+
+.horario p {
+    margin: 20px 10px;   
+}
+
+/* Section de la promocion de las Fotos */  
+.promo_fotos p {
+    margin-bottom: 60px;
+}
+
+/* Section de la promocion de las tartas */  
+.promo_tartas p {
+    margin-top: 20px;
+}
+
+/* Esta clase es para que el color del fondo no abarcara el section completo */
+.p_tartas { 
+    background-color: var(--tono_oscuro);
+    color: white;
+    font-size: 1.3em;
+    padding: 90px 0px 130px 0px;
+    text-align: center;
+}
+
+#slideshow { 
+    position: relative; 
+    margin: auto;
+    width: 240px; 
+    height: 240px;
+    z-index: 1;
+    bottom: 50px;
+}
+
+#slideshow > div { 
+    position: absolute; 
+}
+
+/* /// Section de ubicacion /// */     
+
+.ubicacion {
+    color: var(--tono_claro);
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.ubicacion p {
+    margin: 20px 0 80px 0;
+}
+
+.linea {
+    height: 6px;
+	background-color: var(--tono_claro);
+    border: none;
+    margin-bottom: 80px;	
+}
+
+iframe {
+    width: 100%;
+    max-height: 370px;
+}
+
+/* /// Galeria de Fotos /// */
+
+.galeria {
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.galeria img{
+    filter: grayscale(30%)
+}
+
+
+/* /// Footer /// */ 
+.footer {
+    background:#D1ACAD;
+	color: white;
+	padding: 80px;
+	text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.logos_redes {
+    padding: 20px;
+}
+
+.logos_redes a {
+    padding-left: 20px;
+}
+
+/* Botones */ 
+
+/* Clase del div que tuve que crearle a los botones para centrarlos*/
+.btn_contain {  
+    text-align: center; 
+}
+
+.btn_info {
+    background: none;
+    border-radius: 10px;
+    padding: 15px 25px;
+    color: var(--tono_medio);
+    border: 2px solid var(--tono_medio);
+    cursor: pointer;  
+    margin-bottom: 100px;
+}
+
+.btn_info:hover {
+    background: var(--tono_medio);
+    color: white;
+} 
+
+.arrow{
+    position: fixed;
+    font-size: 1.3em;
+    width: 50px;
+    height: 50px;
+    padding: 15px;
+    right: 20px;
+    bottom: 10px;
+    text-decoration: none;
+    text-align: center;
+    background-color: var(--tono_oscuro);
+    color: white;
+    border-radius: 50%;
+    border: none;
+}
+
+/* Página de la Carta */
+
+.carta h3 {
+    font-family: 'Kaushan Script', cursive;
+    font-size: 1.8em;
+    color: var(--tono_claro);
+    margin: 80px 0px 30px 30px;
+}
+
+.carta div {
+    padding-bottom: 80px;
+}
+
+.carta p {
+    color: var(--tono_oscuro);
+    margin: 0px 20px 20px 30px;
+}
+
+.seleccion {
+    background-color: var(--tono_claro);
+    color: white;
+}
+
+.seleccion h3 {
+    font-family:'Kaushan Script', cursive;
+    font-size: 1.8em;
+    padding: 40px 0px 30px 20px;
+    text-align: center;
+}
+
+.seleccion li {
+    list-style: none;
+    margin: 20px;
+}
+
+.div_seleccion {
+    display: flex;
+    flex-direction: row;
+	justify-content: space-evenly;
+    padding-bottom: 40px;
+}
+
+/* Página de Servicios */
+
+.h2_servicios{
+    margin: 50px;
+    padding-bottom: 20px;
+    text-align: center;
+    font-size: 1.4em;
+    color: var(--tono_medio);
+    border-bottom: 3px solid var(--tono_medio);
+}
+
+.servicios img{
+    padding: 55px;
+}
+
+.servicios div{
+    margin: auto;
+    padding: 30px;
+    color: var(--tono_medio);
+    text-align: center;
+}
+
+/* Página de Contacto */
+
+.contacto {
+    text-align: center;
+    color: var(--tono_medio);
+    margin: 40px; 
+    font-size: 1.2em;
+}
+
+.contacto p {
+    padding-top: 20px;
+}
+
+.formulario {
+    background-color: white;
+    max-width: 600px;
+    margin: 40px auto;
+    border-radius: 5px;
+    padding: 30px 30px 2px 30px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+label {
+    color: var(--tono_medio);
+}
+
+input, textarea {
+    display: block;
+    border: none;
+    background-color:#EDDDDC;
+    padding: 8px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+form div {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.formulario input[type=submit] {
+    padding-left:  50px;
+    padding-right: 50px;
+    margin: 30px 0px;
+}
+
+/* Responsive */ 
+
+@media screen and (min-width:  700px) { 
+
+    .div_text {
+        margin: auto;
+    }
+    
+    .p_decorado {
+        margin: auto;
+    }
+    
+    .descripcion, .ubicacion, .promo_fotos, .carta, .servicios {
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+    }
+    
+    /* Para invertir la posicion de los elementos del section */
+    .promo_fotos, .creppes, .yopuchino, .tartas {
+        direction:rtl; 
+    }
+
+    .creppes, .yopuchino, .tartas {
+        text-align: left;
+    }
+
+    .carta div {
+        padding-bottom: 0px;
+    }
+    
+    .linea {
+        margin-bottom: 0;
+    }
+
+    .galeria {
+        grid-template-columns: repeat(5, 1fr);
+    }
+    
+    iframe {
+        max-height: none;
+    }   
+}
+
+@media screen and (min-width:  900px) {
+    
+    .header_title {
+        font-size: 1.6em;
+    }
+
+    .bg_img {
+        height: 1000px;
+    }
+    
+    .div_text {
+        font-size: 1.3em;
+        padding: 30px;
+    }
+
+    .p_tartas {
+        font-size: 1.6em;
+    }
+
+    #slideshow{
+        width: 340px; 
+        height: 340px;;
+    }
+
+    .descripcion p {
+        font-size: 2.5em;
+        padding: 30px;
+    }
+
+    .horario h3 {
+        font-size: 1.4em;
+        margin-left: 30px;
+    }
+
+    .p_horario {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+        align-items: center;
+        align-content: stretch;
+        font-size: 1.2em;
+    }
+
+    .h2_servicios{
+        font-size: 1.6em;
+    }
+
+    .servicios p{
+        font-size: 1.3em;
+    }
+
+    #btn_contactar{
+        padding-left: 120px;
+        padding-right: 120px;
+    }
+
+
+    .footer p {
+        font-size: 1.3em;
+    }
+}
+
+@media screen and (min-width: 1200px) { 
+    .carta, .seleccion{
+        font-size: 1.3em;
+    } 
+}
+
+/* NavBar */
+@media screen and (max-width: 600px) {
+    
+    .navbar a:not(:first-child) {
+        display: none;
+    }
+
+    .navbar a.icon{
+        float: right;
+        display: block;
+    }
+
+    .navbar.responsive { 
+        position: relative;
+    }
+
+    .navbar.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .navbar.responsive a {
+        float: none;
+        display: block;
+        background-color: var(--tono_oscuro);
+        text-align: center;
+        padding-bottom: 20px;
+    }
+}
