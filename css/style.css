@@ -36,7 +36,7 @@ h2 {
 }
 
 .bg_img {
-    background-image: url("../rsc/img/bg.jpg");
+    background-image: url("../rsc/img/bg.JPG");
     filter: grayscale(20%);
     height: 400px;
     background-position: center;
