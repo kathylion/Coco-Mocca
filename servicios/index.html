@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Servicios - Coco Mocca</title>
     <!-- // Mejoras SEO // -->
+    <title>Servicios - Coco Mocca</title>
     <meta name="author" content="Katherine Leon Acevedo">
     <meta name="copyright" content="Coco Mocca">
     <meta name="contact" content="katherineleon270@gmail.com">
-    <meta name="descripcion" content="El lugar ideal para tomarse unas fotos muy lindas y presumir en instagram mientras disfrutas de una
-    una buena taza de café junto a unos postres inolvidables. Un sitio encantador en Madrid para ir a desayunar o pasar la tarde">
-    <meta name="keywords" content="cafe Madrid, bonita decoracion, lugar agradable, tres leches, red velvet, instagrameable, ambiente floral, desayunos, meriendas">
+    <meta name="descripcion" content="En Coco Mocca ofrecemos la oportunidad de alquilar nuestro local por un
+    día para sesiones de fotos o eventos especiales. También puedes encargar una tarta del sabor que quieras">
+    <meta name="keywords" content="Madrid, bonita decoración, sesiones de fotos, eventos, encargos de tartas, 
+    ambiente floral, rosa">
     <!-- // Links CSS // -->
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" type="text/css" href="../css/normalize.css">
@@ -22,9 +23,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
-    <!-- // Icono // -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    
 </head>
 
 <body>
@@ -40,7 +39,7 @@
 				    <a href="../servicios/index.html">Servicios</a></li>
 				    <a href="../contacto/index.html">Contacto</a></li>                   
                     <a href="javascript:void(0);" class="icon" onclick="navBar()">
-                        <i class="fa fa-bars"></i>
+                        <img src="../rsc/iconos/menu.svg" alt="menu">
                     </a>	
 		        </nav>
             </div>       
@@ -54,23 +53,24 @@
         <section class="servicios">
             <div>   
                 <p>En Cocco Mocca además de pasar una tarde agradable acompañado de un buen 
-                café y un dulce, puedes alquilar nuestros espacios para eventos especiales 
-                y sesiones de fotos!! </p>
+                café y un dulce, puedes alquilar nuestros espacios por un día para eventos especiales 
+                y sesiones de fotos!!</p>
             </div> 
             <img src="../rsc/img/cabina_flores.jpg" alt="Decoracion del local">
         </section>
 
         <section class="servicios tartas">
             <div>
-                <p>Y si tanto te gustaron nuestros tartas especiales, ordena una para llevartela
-                a casa! Tenemos el tamaño medium y el large, los precios varian segun el tipo de 
-                tarta que desees</p>
+                <p>Y si tanto te gustaron nuestros tartas especiales, ordena una para llevártela
+                a casa! Tamaño único equivalente a 12 porciones por 48€ de cualquiera de nuestros 
+                sabores: Red velvet, zanahoria, chocolate, pie de limón, chocolate blanco con 
+                fresas o chocolate con galletas</p>
             </div> 
             <img src="../rsc/img/tarta_4.jpg" alt="Tarta de fresa">
         </section>
-
-        <div class="btn_contain">
-            <button class="btn_info" id="btn_contactar">Contactar</button>
+        
+        <div class="btn_contain div_contactar">
+            <a href="../contacto/index.html" class="btn_info" id="btn_contactar">Contactar</a>
         </div> 
 
         <hr class="linea">
@@ -100,7 +100,10 @@
             </div> 
         </footer>
     </div>
+
+    <!-- // Links JavaScript // --> 
 <script src="../js/navBar.js"></script>
 <script src="../js/stickyBtn.js"></script>
+
 </body>
 </html>

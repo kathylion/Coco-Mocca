@@ -5,10 +5,12 @@
 }
 
 :root {
+    --tono_clarito: #D1ACAD;
     --tono_claro: #9E6565;
 	--tono_medio: #7E413F;
 	--tono_oscuro: #441F1D;
 }
+
 body {
     font-family: 'Poppins', sans-serif;
     font-size: 100%;
@@ -53,7 +55,6 @@ h2 {
 }
 
 /* Nav Bar */
-
 .navbar {
     overflow: hidden;
 }
@@ -70,7 +71,7 @@ h2 {
 }
 
 .navbar a:hover {
-    color: var(--tono_oscuro);
+    color: var(--tono_claro);
 }
 
 .navbar .icon {
@@ -78,10 +79,10 @@ h2 {
 }
 
 /* Main */ 
-
 section img {
     width: 100%;
-    display: block; /* Añadi esto para eliminar un pixel que aparecía debajo de las imágenes */ 
+    /* Añadi esto para eliminar un pixel que aparecía debajo de las imágenes */
+    display: block;  
 }
 
 .p_decorado {
@@ -110,12 +111,20 @@ section img {
     margin: 20px 10px;   
 }
 
-/* Section de la promocion de las Fotos */  
+/* Section de la promoción de las fotos */  
 .promo_fotos p {
     margin-bottom: 60px;
 }
 
-/* Section de la promocion de las tartas */  
+.div_text{
+    margin-bottom: 140px;
+}
+
+/* Section de la promoción de las tartas */ 
+.promo_tartas{
+    padding-bottom: 80px;
+}
+
 .promo_tartas p {
     margin-top: 20px;
 }
@@ -129,36 +138,30 @@ section img {
     text-align: center;
 }
 
+/* Para posicionar las fotos una encima de la otra */
 #slideshow { 
     position: relative; 
     margin: auto;
     width: 240px; 
     height: 240px;
+    bottom: 50px;   
     z-index: 1;
-    bottom: 50px;
 }
 
 #slideshow > div { 
     position: absolute; 
 }
 
-/* Section de ubicacion */     
-
+/* Section de ubicación */     
 .ubicacion {
     color: var(--tono_claro);
     font-size: 1.2em;
     text-align: center;
+    margin-top: 100px;
 }
 
 .ubicacion p {
     margin: 20px 0 80px 0;
-}
-
-.linea {
-    height: 6px;
-	background-color: var(--tono_claro);
-    border: none;
-    margin-bottom: 80px;	
 }
 
 iframe {
@@ -166,8 +169,14 @@ iframe {
     max-height: 370px;
 }
 
-/* /// Galeria de Fotos /// */
+/* Decoración que bordea el section de ubicación */
+.linea {
+    height: 6px;
+    background-color: var(--tono_claro);
+    border: none;	
+}
 
+/* Galería de Fotos */
 .galeria {
     width: 100%;
     margin: auto;
@@ -175,14 +184,14 @@ iframe {
     grid-template-columns: repeat(3, 1fr);
 }
 
+/* Agregué este filtro para dar más suavidad a las fotos */
 .galeria img{
     filter: grayscale(30%)
 }
 
-
-/* /// Footer /// */ 
+/* Footer */ 
 .footer {
-    background:#D1ACAD;
+    background: var(--tono_clarito);
 	color: white;
 	padding: 80px;
 	text-align: center;
@@ -212,13 +221,18 @@ iframe {
     color: var(--tono_medio);
     border: 2px solid var(--tono_medio);
     cursor: pointer;  
-    margin-bottom: 100px;
+    text-decoration: none;
 }
 
 .btn_info:hover {
     background: var(--tono_medio);
     color: white;
 } 
+
+.btn_form {
+    margin: 30px 0px;
+    width: 100%;
+}
 
 .arrow{
     position: fixed;
@@ -237,7 +251,6 @@ iframe {
 }
 
 /* Página de la Carta */
-
 .carta h3 {
     font-family: 'Kaushan Script', cursive;
     font-size: 1.8em;
@@ -271,6 +284,7 @@ iframe {
     margin: 20px;
 }
 
+/* Para posicionar el texto del section de selección */
 .div_seleccion {
     display: flex;
     flex-direction: row;
@@ -279,14 +293,15 @@ iframe {
 }
 
 /* Página de Servicios */
-
 .h2_servicios{
     margin: 50px;
     padding-bottom: 20px;
     text-align: center;
-    font-size: 1.4em;
-    color: var(--tono_medio);
-    border-bottom: 3px solid var(--tono_medio);
+    font-size: 1.6em;
+    color: var(--tono_claro);
+    border-bottom: 3px solid var(--tono_claro);
+    font-family: 'Kaushan Script', cursive;
+    letter-spacing: 0.7px;
 }
 
 .servicios img{
@@ -300,8 +315,11 @@ iframe {
     text-align: center;
 }
 
-/* Página de Contacto */
+.div_contactar{
+    margin-bottom: 80px;
+}
 
+/* Página de Contacto */
 .contacto {
     text-align: center;
     color: var(--tono_medio);
@@ -319,7 +337,8 @@ iframe {
     margin: 40px auto;
     border-radius: 5px;
     padding: 30px 30px 2px 30px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 label {
@@ -340,132 +359,16 @@ form div {
     margin-bottom: 10px;
 }
 
-.formulario input[type=submit] {
-    padding-left:  50px;
-    padding-right: 50px;
-    margin: 30px 0px;
-}
+/* Media Queries */ 
 
-/* Responsive */ 
-
-@media screen and (min-width:  700px) { 
-
-    .div_text {
-        margin: auto;
-    }
-    
-    .p_decorado {
-        margin: auto;
-    }
-    
-    .descripcion, .ubicacion, .promo_fotos, .carta, .servicios {
-        display: grid;
-        grid-template-columns: repeat(2, 50%);
-    }
-    
-    /* Para invertir la posicion de los elementos del section */
-    .promo_fotos, .creppes, .yopuchino, .tartas {
-        direction:rtl; 
-    }
-
-    .creppes, .yopuchino, .tartas {
-        text-align: left;
-    }
-
-    .carta div {
-        padding-bottom: 0px;
-    }
-    
-    .linea {
-        margin-bottom: 0;
-    }
-
-    .galeria {
-        grid-template-columns: repeat(5, 1fr);
-    }
-    
-    iframe {
-        max-height: none;
-    }   
-}
-
-@media screen and (min-width:  900px) {
-    
-    .header_title {
-        font-size: 1.6em;
-    }
-
-    .bg_img {
-        height: 1000px;
-    }
-    
-    .div_text {
-        font-size: 1.3em;
-        padding: 30px;
-    }
-
-    .p_tartas {
-        font-size: 1.6em;
-    }
-
-    #slideshow{
-        width: 340px; 
-        height: 340px;;
-    }
-
-    .descripcion p {
-        font-size: 2.5em;
-        padding: 30px;
-    }
-
-    .horario h3 {
-        font-size: 1.4em;
-        margin-left: 30px;
-    }
-
-    .p_horario {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: space-evenly;
-        align-items: center;
-        align-content: stretch;
-        font-size: 1.2em;
-    }
-
-    .h2_servicios{
-        font-size: 1.6em;
-    }
-
-    .servicios p{
-        font-size: 1.3em;
-    }
-
-    #btn_contactar{
-        padding-left: 120px;
-        padding-right: 120px;
-    }
-
-
-    .footer p {
-        font-size: 1.3em;
-    }
-}
-
-@media screen and (min-width: 1200px) { 
-    .carta, .seleccion{
-        font-size: 1.3em;
-    } 
-}
-
-/* NavBar */
+/* Media query específico para el funcionamiento del menú hamburguesa de la NavBar */
 @media screen and (max-width: 600px) {
     
     .navbar a:not(:first-child) {
         display: none;
     }
 
-    .navbar a.icon{
+    .navbar a.icon {
         float: right;
         display: block;
     }
@@ -488,3 +391,127 @@ form div {
         padding-bottom: 20px;
     }
 }
+
+/* Dispositivos medianos */
+@media screen and (min-width:  700px) { 
+
+    /* Para que los section se dividieran en dos columnas*/
+    .descripcion, .ubicacion, .promo_fotos, .carta, .servicios {
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+    }
+    
+    /* Para invertir la posición de los elementos del section */
+    .promo_fotos, .creppes, .yopuchino, .tartas {
+        direction:rtl; 
+    }
+
+    /* Para que el texto se posicione de lado izquierdo */
+    .creppes, .yopuchino, .tartas {
+        text-align: left;
+    }
+
+    /* Para que el texto se mantega centrado en todo momento*/
+    .div_text {
+        margin: auto;
+    }
+    
+    .p_decorado {
+        margin: auto;
+    }
+    
+    /* Para eliminar separación entre la línea y el section de ubicación*/
+    .ubicacion {
+        margin-top: 0px;
+    }
+
+/* Para que la galería de fotos de la home tenga más columnas*/
+    .galeria {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+/* Para que el tamaño mapa no este delimitado */    
+    iframe {
+        max-height: none;
+    }   
+}
+
+/* Dispositivos grandes */
+@media screen and (min-width:  900px) {
+    
+/* Para aumentar el tamaño de los contenidos */     
+    .header_title {
+        font-size: 1.6em;
+    }
+
+    .bg_img {
+        height: 1000px;
+    }
+
+    .navbar a {
+        font-size: 1.6em;
+    }
+
+    .logo {
+        height: 40px;
+    }
+    
+    .div_text {
+        font-size: 1.3em;
+        padding: 30px;
+    }
+
+    .p_tartas {
+        font-size: 1.6em;
+    }
+
+    #slideshow {
+        width: 340px; 
+        height: 340px;;
+    }
+
+    .descripcion p {
+        font-size: 2.5em;
+        padding: 30px;
+    }
+
+    .horario h3 {
+        font-size: 1.4em;
+        margin-left: 30px;
+    }
+
+    .carta, .seleccion{
+        font-size: 1.3em;
+    }      
+    
+    .h2_servicios{
+        font-size: 1.8em;
+    }
+
+    .servicios p{
+        font-size: 1.3em;
+    }
+
+    .contacto h2 {
+        font-size: 1.3em;
+    }
+
+    #btn_contactar{
+        padding-left: 120px;
+        padding-right: 120px;
+    }
+    
+    .footer p {
+        font-size: 1.3em;
+    }
+
+/* Para dividir en dos columnas el texto de los horarios */ 
+    .p_horario {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        font-size: 1.2em;
+    }
+}
+

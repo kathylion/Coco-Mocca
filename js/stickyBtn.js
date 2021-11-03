@@ -9,7 +9,7 @@ window.onscroll = function(){
 
 function scrollFunction(){
 	
-  if(document.body.scrollTop > 400 || document.documentElement.scrollTop > 400){
+	if(document.body.scrollTop > 400 || document.documentElement.scrollTop > 400){
 		arrowBtn.style.display = "block";
 	} else {
 		arrowBtn.style.display = "none";
@@ -18,6 +18,6 @@ function scrollFunction(){
 
 function topFunction(){
 	
-  document.documentElement.scrollTop = 0;
+	document.documentElement.scrollTop = 0;
 	document.body.scrollTop = 0;
 }
