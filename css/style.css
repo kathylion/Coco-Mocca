@@ -116,12 +116,12 @@ section img {
     margin-bottom: 60px;
 }
 
-.div_text{
+.div_text {
     margin-bottom: 140px;
 }
 
 /* Section de la promoción de las tartas */ 
-.promo_tartas{
+.promo_tartas {
     padding-bottom: 80px;
 }
 
@@ -185,7 +185,7 @@ iframe {
 }
 
 /* Agregué este filtro para dar más suavidad a las fotos */
-.galeria img{
+.galeria img {
     filter: grayscale(30%)
 }
 
@@ -234,7 +234,8 @@ iframe {
     width: 100%;
 }
 
-.arrow{
+/* Posicionar y darle estilo al sticky botón */
+.arrow {
     position: fixed;
     font-size: 1.3em;
     width: 50px;
@@ -260,6 +261,7 @@ iframe {
 
 .carta div {
     padding-bottom: 80px;
+    line-height: 30px;
 }
 
 .carta p {
@@ -293,7 +295,7 @@ iframe {
 }
 
 /* Página de Servicios */
-.h2_servicios{
+.h2_servicios {
     margin: 50px;
     padding-bottom: 20px;
     text-align: center;
@@ -304,18 +306,19 @@ iframe {
     letter-spacing: 0.7px;
 }
 
-.servicios img{
+.servicios img {
     padding: 55px;
 }
 
-.servicios div{
+.servicios div {
     margin: auto;
     padding: 30px;
     color: var(--tono_medio);
     text-align: center;
+    line-height: 30px;
 }
 
-.div_contactar{
+.div_contactar {
     margin-bottom: 80px;
 }
 
@@ -372,15 +375,15 @@ form div {
         float: right;
         display: block;
     }
-
-    .navbar.responsive { 
-        position: relative;
-    }
-
+    
     .navbar.responsive a.icon {
         position: absolute;
         right: 0;
         top: 0;
+    }
+    
+    .navbar.responsive { 
+        position: relative;
     }
 
     .navbar.responsive a {
@@ -467,7 +470,7 @@ form div {
 
     #slideshow {
         width: 340px; 
-        height: 340px;;
+        height: 340px;
     }
 
     .descripcion p {
@@ -480,23 +483,23 @@ form div {
         margin-left: 30px;
     }
 
-    .carta, .seleccion{
+    .carta, .seleccion {
         font-size: 1.3em;
     }      
     
-    .h2_servicios{
+    .h2_servicios {
         font-size: 1.8em;
     }
 
-    .servicios p{
-        font-size: 1.3em;
+    .servicios p {
+        font-size: 1.3em;  
     }
 
     .contacto h2 {
         font-size: 1.3em;
     }
 
-    #btn_contactar{
+    #btn_contactar {
         padding-left: 120px;
         padding-right: 120px;
     }
@@ -513,5 +516,17 @@ form div {
         align-items: center;
         font-size: 1.2em;
     }
+}
+
+/* Para aumentar el tamaño de los párrafos en dispositivos extra-grandes */
+@media screen and (min-width:  1200px) {
+    
+    .servicios p {
+        font-size: 1.6em;
+    }
+
+    .carta, .seleccion {
+        font-size: 1.4em;
+    } 
 }
 
